@@ -16,13 +16,20 @@ jobs:
     steps:
       - name: 🛎️ Checkout repository
         uses: actions/checkout@v2.3.1
+        with:
+          token: ${{ secrets.TOKEN_REPO_PUBLISH }}
+          branch: master
+          persist-credentials: true
 
       - name: 🔧 Сlone submodule
         uses: actions/checkout@v2.3.1
         with:
           token: ${{ secrets.TOKEN_REPO_PUBLISH }}
+          branch: master
+          persist-credentials: false
+          repository: GesuSites/GesuSiteSecret
+          path: secret
           submodules: recursive
-          persist-credentials: true
 
       - name: 🔧 Checkout submodule
         shell: bash
