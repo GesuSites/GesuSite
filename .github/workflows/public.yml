@@ -23,7 +23,7 @@ jobs:
       uses: actions/checkout@v2
       with: 
         token: ${{ secrets.TOKEN_REPO_PUBLISH }}
-        repository: <PUBLIC_REPO>
+        repository: https://github.com/GesuSites/Gesugao-san.git
         ref: master 
         path: site
     - name: Perform jekyll build
