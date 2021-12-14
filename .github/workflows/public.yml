@@ -18,6 +18,9 @@ jobs:
 
       - name: Checkout submodules
         shell: bash
+        with:
+          repository: orgname/reponame
+          token: ${{ secrets.TOKEN_REPO_PUBLISH }}
         run: |
           # If your submodules are configured to use SSH instead of HTTPS please uncomment the following line
           # git config --global url."https://github.com/".insteadOf "git@github.com:"
