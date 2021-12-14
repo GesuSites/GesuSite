@@ -26,9 +26,9 @@ jobs:
         with:
           token: ${{ secrets.TOKEN_REPO_PUBLISH }}
           branch: master
-          persist-credentials: false
+          persist-credentials: true
           repository: GesuSites/GesuSiteSecret
-          path: secret
+          # path: secret
           submodules: recursive
 
       - name: 🔧 Checkout submodule
